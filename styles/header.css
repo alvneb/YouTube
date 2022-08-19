@@ -1,0 +1,207 @@
+.header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+
+  border-bottom-style: solid;
+  border-bottom-color: rgb(228, 225, 225);
+  border-bottom-width: 1px;
+
+  z-index: 100;
+}
+
+
+
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-menu {
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger-menu:hover ~ .sidebar{
+  opacity: 0;
+}
+
+.youtube-logo {
+  height: 20px;
+  cursor: pointer;
+}
+
+
+
+
+.middle-section {
+  margin-left: 70px;
+  margin-right: 35px;
+  flex: 1;
+  max-width: 500px;
+
+  display: flex;
+  align-items: center;
+}
+
+.search-bar,
+.search-button,
+.voice-button {
+  border: 1px solid rgb(196, 193, 193);
+}
+
+.search-bar {
+  flex: 1;
+  height: 36px;  
+  font-size: 16px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  width: 0;
+}
+
+.search-bar::placeholder {
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.search-button {
+  height: 40px;
+  width: 66px;
+  background-color: rgb(245, 245, 245);
+  margin-left: -1px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.search-button,
+.voice-button,
+.upload-icon-container,
+.apps-icon-container,
+.notifications-icon-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-button:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.search-button:active {
+  background-color: rgb(230, 230, 230);
+
+}
+
+.search-button .tooltip,
+.voice-button .tooltip,
+.upload-icon-container .tooltip,
+.apps-icon-container .tooltip,
+.notifications-icon-container .tooltip {
+  position: absolute;
+  background-color: grey;
+  color: white;
+  padding: 10px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+
+  bottom: -55px;
+  opacity: 0;
+  transition: opacity 0.15;
+
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.apps-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip {
+  opacity: 0.92;
+}
+
+.search-button:active {
+  background-color: rgb(230, 230, 230);  
+}
+
+.search-icon {
+  height: 25px;
+}
+
+.voice-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: none;  
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+}
+
+.voice-icon {
+  height: 25px;
+}
+
+
+
+
+.right-section {
+  width: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  margin-right: 20px;
+
+  flex-shrink: 0;
+}
+
+.upload {
+  height: 30px;
+  cursor: pointer;
+}
+
+.apps {
+  height: 30px;
+  cursor: pointer;
+}
+
+.notifications-icon-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.notif {
+  height: 30px;
+  vertical-align: middle;
+}
+
+.notifications-count {
+  position: absolute;
+  top: -2px;
+  right: -4px;
+
+  background-color: red;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 20px;
+  font-size: 11px;
+  
+}
+
+.my-channel-pic {
+  height: 35px;
+  border-radius: 16;
+  cursor: pointer;
+}
